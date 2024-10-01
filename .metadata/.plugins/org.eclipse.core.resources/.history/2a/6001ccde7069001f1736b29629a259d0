@@ -1,0 +1,38 @@
+package src.test;
+
+public class SubArray {
+
+	public static void main(String[] args) {
+       int array[] = new int[] {1,2,3,7,5,6};
+       int k= 3;
+       long result = findSubArray(array,k);
+       
+	}
+
+	private static long findSubArray(int[] array, int k) {
+		for(int i = 0;i<array.length;i++) {
+			int subArray[] = new int[k];
+			int index= 0;
+			for(int j = i+1;j<=k;j++) {
+				
+				subArray[index]=array[i];
+				System.out.println(subArray[index]);
+				index++;
+		}
+			
+			/*
+			 * for(int k1=0;k1<=subArray.length;k1++) { System.out.println(subArray[k1]); }
+			 */
+			  }
+			 
+	
+		
+		
+		
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	
+
+}

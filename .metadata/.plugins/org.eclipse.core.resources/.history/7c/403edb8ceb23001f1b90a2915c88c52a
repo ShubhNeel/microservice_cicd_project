@@ -1,0 +1,30 @@
+package com.example.demo.service;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import com.example.demo.entity.Employee;
+import com.example.demo.repository.EmployeeRepo;
+
+@Component
+public class DbRunner implements CommandLineRunner {
+
+	@Autowired
+	EmployeeRepo emprepo;
+	
+	@Override
+	public void run(String... args) throws Exception {
+		emprepo.saveAll(Arrays.asList(
+				
+				new Employee('sharu','abc@mail.com',33,101),
+				new Employee('neel','abc@mail.com',33,102),
+				new Employee('shubha','abc@mail.com',33,103),
+				new Employee('sharvi','abc@mail.com',33,104))
+				);
+	
+	}
+
+}
